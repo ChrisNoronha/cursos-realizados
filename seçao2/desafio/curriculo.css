@@ -1,0 +1,24 @@
+.name-curriculum {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.items-curriculum {
+    border-bottom: 10px solid red;
+    
+}
+
+.items-curriculum h1 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.items-curriculum p, .items-curriculum ul {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.items-curriculum ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
