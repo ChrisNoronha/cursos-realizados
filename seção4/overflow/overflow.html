@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Overflow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Exemplo de Overflow</h2>
+        <div class="box">
+            <p>Este é um exemplo de conteúdo que excede o tamanho da caixa. A propriedade `overflow` pode ser usada para
+                controlar como esse conteúdo extra é tratado. Você pode optar por ocultar o conteúdo, adicionar barras
+                de rolagem ou exibir o conteúdo de maneira visível. Continue a adicionar conteúdo para ver o efeito do
+                `overflow`.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor..</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+            <p>lorem10</p>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box {
+        width: 300px;
+        height: 150px;
+        padding: 10px;
+        border: 2px solid #007BFF;
+        overflow: auto;
+        /* Esta propriedade controla o overflow */
+        background-color: #e9ecef;
+    }
+
+    .box p {
+        margin: 0 0 10px;
+    }
+</style>
+
+</html>

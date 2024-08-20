@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serfrontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-image: url('imagens/bg-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .course {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .course h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .course p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .course a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .course a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Blog</a>
+            <a href="#">Cursos</a>
+        </nav>
+        <h1>CURSOS SERFRONTEND</h1>
+        <p>Tudo o que precisa saber para iniciar na carreira</p>
+    </header>
+    <div class="content">
+        <div class="course">
+            <h2>O HTML</h2>
+            <p>HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+        <div class="course">
+            <h2>O CSS</h2>
+            <p>CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem de estilo (en-US) usada para descrever a apresentação de um documento escrito em HTML ou em XML (incluindo várias linguagens em XML como SVG, MathML ou XHTML). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+        <div class="course">
+            <h2>O Javascript</h2>
+            <p>JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js, Apache CouchDB e Adobe Acrobat. O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional).</p>
+            <a href="#">Saiba mais</a>
+        </div>
+    </div>
+</body>
+</html>
