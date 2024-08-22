@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact List with Sidebar</title>
+    <title>Contact List with Scrollable Box</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .sidebar {
@@ -46,6 +46,15 @@
         .contact-group h4 {
             margin-bottom: 15px;
         }
+
+        .contact-box {
+            max-height: 400px; /* Define a altura da caixa para caber 5 contatos */
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +64,7 @@
     </div>
 
     <div class="content">
-        <div id="contact-list" class="list-group"></div>
+        <div id="contact-list" class="list-group contact-box"></div>
     </div>
 
     <script>
@@ -70,26 +79,6 @@
                 const contacts = data.results;
 
                 contacts.forEach((contact, index) => {
-                    const groupId = `group-${Math.floor(index / 5) + 1}`;
-                    let group = document.getElementById(groupId);
-                    
-                    if (!group) {
-                        // Criar um novo grupo de contatos
-                        group = document.createElement('div');
-                        group.id = groupId;
-                        group.className = 'contact-group';
-                        group.innerHTML = `<h4>Group ${Math.floor(index / 5) + 1}</h4>`;
-                        contactList.appendChild(group);
-
-                        // Adicionar link na barra lateral
-                        const sidebarItem = document.createElement('a');
-                        sidebarItem.href = `#${groupId}`;
-                        sidebarItem.className = 'nav-link';
-                        sidebarItem.innerText = `Group ${Math.floor(index / 5) + 1}`;
-                        contactSidebar.appendChild(sidebarItem);
-                    }
-
-                    // Adicionar contato ao grupo
                     const contactItem = document.createElement('div');
                     contactItem.className = 'list-group-item contact-item';
                     contactItem.innerHTML = `
@@ -99,7 +88,17 @@
                             <small>${contact.email}</small>
                         </div>
                     `;
-                    group.appendChild(contactItem);
+                    contactList.appendChild(contactItem);
+
+                    if ((index + 1) % 5 === 0) {
+                        // Criar um link na barra lateral para cada conjunto de 5 contatos
+                        const groupId = `group-${Math.floor(index / 5) + 1}`;
+                        const sidebarItem = document.createElement('a');
+                        sidebarItem.href = `#${groupId}`;
+                        sidebarItem.className = 'nav-link';
+                        sidebarItem.innerText = `Group ${Math.floor(index / 5) + 1}`;
+                        contactSidebar.appendChild(sidebarItem);
+                    }
                 });
             } catch (error) {
                 console.error('Error fetching contacts:', error);
