@@ -7,8 +7,102 @@
     <title>Price cards</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
+        .header-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-nav ul li {
+            margin: 0 15px;
+        }
+
+        .header-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 2.5rem;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .pricing-plan {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .pricing-plan:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing-plan h2 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .pricing-plan-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .pricing-plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .pricing-plan-features li {
+            margin-bottom: 10px;
+        }
+
+        .pricing-qta {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .pricing-qta:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -18,19 +112,54 @@
         <div>TiroCerto</div>
         <nav class="header-nav">
             <ul>
-                <li><a href="#">Home</li>
-                <li><a href="#">Planos</li>
-                <li><a href="#">Suporte</li>
-                <li><a href="#">Contato</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-
-
     </header>
-
-    <script>
-
-    </script>
+    <h1 class="main-title">Escolha Seu Plano</h1>
+    <section class="pricing container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="pricing-plan">
+                    <h2 class="class-plan-title">Essencial</h2>
+                    <p><span class="pricing-plan-value">4.45$</span></p>
+                    <ul class="pricing-plan-features">
+                        <li>Website</li>
+                        <li>256mb de ram</li>
+                        <li>Meio quiloton de armazenamento</li>
+                    </ul>
+                    <a href="#" class="pricing-qta">Assine Agora!!!!</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="pricing-plan">
+                    <h2 class="class-plan-title">Essencial</h2>
+                    <p><span class="pricing-plan-value">4.45$</span></p>
+                    <ul class="pricing-plan-features">
+                        <li>Website</li>
+                        <li>128mb de ram</li>
+                        <li>Um quiloton de armazenamento</li>
+                    </ul>
+                    <a href="#" class="pricing-qta">Assine Agora!!!!</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="pricing-plan">
+                    <h2 class="class-plan-title">Essencial</h2>
+                    <p><span class="pricing-plan-value">4.45$</span></p>
+                    <ul class="pricing-plan-features">
+                        <li>Website</li>
+                        <li>1zilhaomb de ram</li>
+                        <li>Quarto quiloton de armazenamento</li>
+                    </ul>
+                    <a href="#" class="pricing-qta">Assine Agora!!!!</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
