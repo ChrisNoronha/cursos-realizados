@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List with Scrollable Box</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contact-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            height:10rem;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .contact-item img {
+            margin-right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="content col-12">
+        <div id="contact-list" class="contact-box"></div>
+    </div>
+
+    <script>
+        const contactList = document.getElementById('contact-list');
+
+        // Função para buscar contatos
+        async function fetchContacts() {
+            try {
+                const response = await fetch('https://randomuser.me/api/?results=30'); // Pega 30 contatos aleatórios
+                const data = await response.json();
+                const contacts = data.results;
+
+                let row;
+                contacts.forEach((contact, index) => {
+                    if (index % 3 === 0) {
+                        row = document.createElement('div');
+                        row.className = 'row';
+                        contactList.appendChild(row);
+                    }
+
+                    const contactItem = document.createElement('div');
+                    contactItem.className = 'col-4'; // 1/3 da linha
+                    contactItem.innerHTML = `
+                        <div class="list-group-item contact-item">
+                            <img src="${contact.picture.thumbnail}" alt="${contact.name.first} ${contact.name.last}" class="contact-img">
+                            <div>
+                                <strong>${contact.name.first} ${contact.name.last}</strong><br>
+                                <small>${contact.email}</small>
+                            </div>
+                        </div>
+                    `;
+                    row.appendChild(contactItem);
+                });
+            } catch (error) {
+                console.error('Error fetching contacts:', error);
+            }
+        }
+
+        // Carrega os contatos ao carregar a página
+        document.addEventListener('DOMContentLoaded', fetchContacts);
+    </script>
+</body>
+</html>
