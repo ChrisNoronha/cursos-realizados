@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Unidades de Tamanho de Fonte</title>
+    <style>
+        /* Tamanho base da fonte para o elemento HTML (raiz) */
+        html {
+            font-size: 16px; /* Este é tipicamente o tamanho padrão do navegador */
+        }
+
+        /* Porcentagem (%) - Relativo ao tamanho da fonte do elemento pai */
+        .exemplo-porcentagem {
+            font-size: 150%; /* Será 150% do tamanho da fonte do elemento pai */
+        }
+
+        /* Em (em) - Relativo ao tamanho da fonte do elemento pai */
+        .exemplo-em {
+            font-size: 1.5em; /* 1em é igual ao tamanho da fonte do elemento pai */
+        }
+
+        /* Root Em (rem) - Relativo ao tamanho da fonte do elemento raiz */
+        .exemplo-rem {
+            font-size: 1.5rem; /* 1rem é igual ao tamanho da fonte do elemento raiz (html) */
+        }
+
+        /* Pixels (px) - Tamanho fixo, não escala com preferências do usuário */
+        .exemplo-pixel {
+            font-size: 24px; /* Unidade absoluta, sempre 24 pixels */
+        }
+
+        /* Exemplo aninhado para mostrar diferença entre em e rem */
+        .pai {
+            font-size: 20px;
+        }
+        
+        .filho-em {
+            font-size: 1.5em; /* Será 30px (1.5 × 20px do pai) */
+        }
+        
+        .filho-rem {
+            font-size: 1.5rem; /* Será 24px (1.5 × 16px da raiz) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Demonstração de Unidades de Tamanho de Fonte</h1>
+
+    <!-- Exemplo de porcentagem -->
+    <p class="exemplo-porcentagem">
+        Este texto usa tamanho de fonte 150% do elemento pai
+    </p>
+
+    <!-- Exemplo de Em -->
+    <p class="exemplo-em">
+        Este texto usa tamanho de fonte 1.5em
+    </p>
+
+    <!-- Exemplo de Rem -->
+    <p class="exemplo-rem">
+        Este texto usa tamanho de fonte 1.5rem
+    </p>
+
+    <!-- Exemplo de Pixel -->
+    <p class="exemplo-pixel">
+        Este texto usa tamanho de fonte 24px
+    </p>
+
+    <!-- Exemplo aninhado -->
+    <div class="pai">
+        Texto do elemento pai (20px)
+        <div class="filho-em">
+            Filho com em (30px - relativo ao pai)
+        </div>
+        <div class="filho-rem">
+            Filho com rem (24px - relativo à raiz)
+        </div>
+    </div>
+</body>
+</html>

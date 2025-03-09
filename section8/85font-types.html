@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Unidades Viewport (VW e VH)</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* VW (Viewport Width) - Relativo à largura da viewport */
+        .texto-largura {
+            font-size: 5vw; /* 5% da largura da viewport */
+            background-color: #e6f3ff;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* VH (Viewport Height) - Relativo à altura da viewport */
+        .texto-altura {
+            font-size: 5vh; /* 5% da altura da viewport */
+            background-color: #ffe6e6;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Exemplo de container usando VW e VH */
+        .container-viewport {
+            width: 50vw; /* 50% da largura da viewport */
+            height: 50vh; /* 50% da altura da viewport */
+            background-color: #e6ffe6;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        /* Banner usando viewport units */
+        .banner {
+            width: 100vw; /* Largura total da viewport */
+            height: 30vh; /* 30% da altura da viewport */
+            background-color: #ffd700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card responsivo */
+        .card {
+            width: 30vw;
+            height: 20vh;
+            background-color: #ff9999;
+            margin: 10px;
+            padding: 2vw;
+            border-radius: 1vw;
+        }
+
+        /* Menu lateral */
+        .menu-lateral {
+            width: 20vw;
+            height: 100vh;
+            background-color: #99ff99;
+            position: fixed;
+            right: 0;
+            top: 0;
+            padding: 2vh;
+        }
+
+        /* Texto explicativo */
+        .explicacao {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="explicacao">
+        <h1>Demonstração de Unidades Viewport (VW e VH)</h1>
+        <p>VW = Viewport Width (Largura da Viewport)</p>
+        <p>VH = Viewport Height (Altura da Viewport)</p>
+    </div>
+
+    <div class="banner">
+        <h2>Banner com 100vw × 30vh</h2>
+    </div>
+
+    <p class="texto-largura">
+        Este texto usa 5vw - Ele se ajusta com base na LARGURA da janela
+    </p>
+
+    <p class="texto-altura">
+        Este texto usa 5vh - Ele se ajusta com base na ALTURA da janela
+    </p>
+
+    <div class="container-viewport">
+        <h3>Container 50vw × 50vh</h3>
+        <p>Este container ocupa metade da largura e altura da viewport</p>
+    </div>
+
+    <div class="card">
+        <h3>Card Responsivo</h3>
+        <p>30vw × 20vh</p>
+    </div>
+
+    <div class="menu-lateral">
+        <h3>Menu Lateral</h3>
+        <p>20vw × 100vh</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</body>
+</html>

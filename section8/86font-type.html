@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Unidade CH (Character Width)</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: monospace; /* Fonte monoespaçada para melhor demonstração */
+        }
+
+        /* Explicação sobre CH */
+        .explicacao {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 80ch; /* Largura de 80 caracteres */
+        }
+
+        /* Parágrafo curto - Bom para leitura */
+        .paragrafo-curto {
+            width: 60ch; /* Largura ideal para leitura (45-75 caracteres) */
+            background-color: #e6f3ff;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* Parágrafo médio */
+        .paragrafo-medio {
+            width: 45ch;
+            background-color: #ffe6e6;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* Card com largura baseada em CH */
+        .card {
+            width: 30ch;
+            background-color: #e6ffe6;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        /* Input com largura em CH */
+        .input-ch {
+            width: 20ch;
+            padding: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+
+        /* Demonstração de diferentes tamanhos */
+        .tamanhos-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .linha-ch {
+            background-color: #ffd700;
+            padding: 5px;
+            margin: 2px 0;
+        }
+
+        .ch-10 { width: 10ch; }
+        .ch-20 { width: 20ch; }
+        .ch-30 { width: 30ch; }
+        .ch-40 { width: 40ch; }
+        .ch-50 { width: 50ch; }
+
+        /* Container com texto justificado */
+        .texto-justificado {
+            width: 70ch;
+            text-align: justify;
+            background-color: #fff3e6;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* Código exemplo */
+        .codigo-exemplo {
+            width: 50ch;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="explicacao">
+        <h1>Demonstração da Unidade CH</h1>
+        <p>A unidade CH é baseada na largura do caractere "0" da fonte atual.</p>
+        <p>É especialmente útil para:</p>
+        <ul>
+            <li>Definir larguras de texto legíveis</li>
+            <li>Criar layouts consistentes com fontes monoespaçadas</li>
+            <li>Controlar comprimentos de linha para melhor legibilidade</li>
+        </ul>
+    </div>
+
+    <div class="paragrafo-curto">
+        <h2>Parágrafo com 60ch</h2>
+        <p>Este parágrafo tem uma largura de 60 caracteres, que é considerada uma largura ideal para leitura. 
+           O texto fica confortável para ler e não cansa os olhos do leitor.</p>
+    </div>
+
+    <div class="paragrafo-medio">
+        <h2>Parágrafo com 45ch</h2>
+        <p>Este é um parágrafo mais estreito, com 45 caracteres de largura. 
+           Bom para textos em dispositivos menores.</p>
+    </div>
+
+    <div class="card">
+        <h2>Card com 30ch</h2>
+        <p>Um card compacto com largura de 30 caracteres.</p>
+    </div>
+
+    <div class="tamanhos-demo">
+        <h2>Demonstração de Diferentes Larguras</h2>
+        <div class="linha-ch ch-10">10ch</div>
+        <div class="linha-ch ch-20">20ch de largura</div>
+        <div class="linha-ch ch-30">30ch de largura - um pouco mais longo</div>
+        <div class="linha-ch ch-40">40ch de largura - ainda mais espaço para texto</div>
+        <div class="linha-ch ch-50">50ch de largura - uma linha bem comprida para demonstração</div>
+    </div>
+
+    <div>
+        <h2>Campo de Entrada</h2>
+        <input type="text" class="input-ch" placeholder="Largura de 20ch">
+    </div>
+
+    <div class="texto-justificado">
+        <h2>Texto Justificado (70ch)</h2>
+        <p>Este é um exemplo de texto justificado com largura de 70 caracteres. 
+           O texto se ajusta para preencher todo o espaço disponível, criando margens 
+           retas em ambos os lados. Isso é comum em livros e documentos formais.</p>
+    </div>
+
+    <div class="codigo-exemplo">
+        <h2>Código (50ch)</h2>
+        <pre>
+function exemplo() {
+    // Este é um exemplo de código
+    // com largura de 50ch
+    return "Exemplo";
+}
+        </pre>
+    </div>
+</body>
+</html>
