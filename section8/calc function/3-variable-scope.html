@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable scope</title>
+    <style>
+        :root {
+            --color: red;
+        }
+        p {
+            color: var(--color)
+        }
+        .div1 {
+            --color: green;
+        }/*note que ele pega do pai mais próximo*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="div2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

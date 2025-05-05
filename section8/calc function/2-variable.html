@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc()</title>
+    <style>
+
+        /*:root {
+            --header-height: 15rem;
+        } mesma coisa que html não gera especificidade, usasse mais para declaração
+         de variáveis*/
+        html .variable-main {
+            font-size: 2rem;
+            --header-height: 15rem;
+        }
+
+        header {
+            width: 100%;
+            background-color: yellow;
+            height: var(--header-height);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        main {
+            min-height: calc(100vh - var(--header-height) - 1rem);
+            background-color: gray;
+            margin-top: var(--header-height);
+        }
+
+        footer {
+            height: 10rem;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body class="variable-main">
+    <header>header</header>
+    <main>main</main>
+    <footer>footer</footer>
+    
+</body>
+</html>
